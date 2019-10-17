@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://localhost:8585/register" method="post">
+        <label>
+            用户名:
+            <input type="text" name="username" value="<%=cacheMsg.username%>"><%=msgErr.usernameErr%>
+        </label><br>
+        <label>
+            密码:
+            <input type="password" name="password"> <span><%=msgErr.passwordErr%></span>
+        </label><br>
+        <label>
+            确认密码:
+            <input type="password" name="rePassword">
+            <span><%=msgErr.passwordErr%></span>
+        </label><br>
+        <label>
+            邮箱:
+            <input type="text" name="email" value="<%=cacheMsg.email%>">
+            <span><%=msgErr.emailErr%></span>
+        </label>
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>
